@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    ```
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <title>Jagodna geowizualizacja 3D</title>
+
+    <style>
+      #tytul h1,
+      p {
+        color: #000;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0px 7px 4px 4px;
+        text-align: center;
+      }
+
+      model-viewer {
+        width: 100%;
+        height: 75vh;
+        margin: 0 auto;
+        border: 1px solid #000000;
+        background-color: #cfcdcd;
+      }
+
+      model-viewer #ar-button {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 55%;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 10px 7px;
+        border: 1px solid #393a37;
+        color: #393a37;
+        background: white;
+      }
+    </style>
+    ```
+  </head>
+
+  <body>
+    <div id="tytul">
+      <h1>Jagodna 977 m n.p.m.</h1>
+      <p>Opracowała: Anna Dłużewska</p>
+    </div>
+
+    ```
+    <div id="model-ar">
+      <model-viewer
+        id="geowizualizacja1"
+        src="https://raw.githubusercontent.com/AniaDluzewska/3d/c33bdb63638aeb6d67182c0955d873780fa0b99f/jagodna.glb"
+        alt="jagodna"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        camera-orbit="0deg 75deg 3m"
+      >
+        <button slot="ar-button" id="ar-button">wyświetl u siebie [AR]</button>
+      </model-viewer>
+    </div>
+    ```
+  </body>
+</html>
